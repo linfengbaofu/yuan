@@ -548,7 +548,7 @@ function SyncItems() {
           </div>
         </ListItem> */}
 
-        <ListItem
+        {/* <ListItem
           title={Locale.Settings.Sync.LocalState}
           subTitle={Locale.Settings.Sync.Overview(stateOverview)}
         >
@@ -570,12 +570,12 @@ function SyncItems() {
               }}
             />
           </div>
-        </ListItem>
+        </ListItem> */}
       </List>
-
+{/* 
       {showSyncConfigModal && (
         <SyncConfigModal onClose={() => setShowSyncConfigModal(false)} />
-      )}
+      )} */}
     </>
   );
 }
@@ -1484,7 +1484,7 @@ export function Settings() {
       </div>
       <div className={styles["settings"]}>
         <List>
-          <ListItem title={Locale.Settings.Avatar}>
+          {/* <ListItem title={Locale.Settings.Avatar}>
             <Popover
               onClose={() => setShowEmojiPicker(false)}
               content={
@@ -1508,7 +1508,7 @@ export function Settings() {
                 <Avatar avatar={config.avatar} />
               </div>
             </Popover>
-          </ListItem>
+          </ListItem> */}
 
           {/* <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
@@ -1633,7 +1633,7 @@ export function Settings() {
             ></input>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.AutoGenerateTitle.Title}
             subTitle={Locale.Settings.AutoGenerateTitle.SubTitle}
           >
@@ -1648,7 +1648,7 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem> */}
 
           {/* <ListItem
             title={Locale.Settings.SendPreviewBubble.Title}
@@ -1701,9 +1701,9 @@ export function Settings() {
           </ListItem> */}
         </List>
 
-        <SyncItems />
+        {/* <SyncItems /> */}
 
-        <List>
+        {/* <List>
           <ListItem
             title={Locale.Settings.Mask.Splash.Title}
             subTitle={Locale.Settings.Mask.Splash.SubTitle}
@@ -1738,9 +1738,9 @@ export function Settings() {
               }
             ></input>
           </ListItem>
-        </List>
+        </List> */}
 
-        <List>
+        {/* <List>
           <ListItem
             title={Locale.Settings.Prompt.Disable.Title}
             subTitle={Locale.Settings.Prompt.Disable.SubTitle}
@@ -1772,7 +1772,7 @@ export function Settings() {
               onClick={() => setShowPromptModal(true)}
             />
           </ListItem>
-        </List>
+        </List> */}
 
         {/* <List id={SlotID.CustomModel}>
           {saasStartComponent}

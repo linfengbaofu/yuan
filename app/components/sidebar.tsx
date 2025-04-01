@@ -356,7 +356,7 @@ export function SideBar(props: { className?: string }) {
       <SideBarTail
         primaryAction={
           <>
-            <div className={clsx(styles["sidebar-action"], styles.mobile)}>
+            {/* <div className={clsx(styles["sidebar-action"], styles.mobile)}>
               <IconButton
                 icon={<DeleteIcon />}
                 onClick={async () => {
@@ -365,15 +365,15 @@ export function SideBar(props: { className?: string }) {
                   }
                 }}
               />
-            </div>
+            </div> */}
             <div className={styles["sidebar-action"]}>
-              {/* <Link to={Path.Settings}>
+              <Link to={Path.Settings}>
                 <IconButton
                   aria={Locale.Settings.Title}
                   icon={<SettingsIcon />}
                   shadow
                 />
-              </Link> */}
+              </Link>
             </div>
             {/* <div className={styles["sidebar-action"]}>
               <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
