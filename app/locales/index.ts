@@ -95,7 +95,7 @@ function setItem(key: string, value: string) {
   localStorage.setItem(key, value);
 }
 
-function getLanguage() {
+function getLanguage():any {
   try {
     const locale = new Intl.Locale(navigator.language).maximize();
     const region = locale?.region?.toLowerCase();
