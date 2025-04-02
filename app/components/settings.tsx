@@ -49,7 +49,7 @@ import Locale, {
   changeLang,
   getLang,
 } from "../locales";
-import { copyToClipboard, semverCompare } from "../utils";
+import { clientUpdate, copyToClipboard, semverCompare } from "../utils";
 import Link from "next/link";
 import {
   Anthropic,
