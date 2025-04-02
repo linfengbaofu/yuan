@@ -98,7 +98,11 @@ export interface ChatSession {
 export const DEFAULT_TOPIC = Locale.Store.DefaultTopic;
 export const BOT_HELLO: ChatMessage = createMessage({
   role: "assistant",
-  content: Locale.Store.BotHello,
+  content: '我是是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
+});
+export const User_HELLO: ChatMessage = createMessage({
+  role: "user",
+  content: '你是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
 });
 
 function createEmptySession(): ChatSession {
@@ -114,8 +118,18 @@ function createEmptySession(): ChatSession {
     },
     lastUpdate: Date.now(),
     lastSummarizeIndex: 0,
+    mask: {
+      hideContext: true,
+      "id": "AQ1UVwZc5-wIqbNSdHu2d",
+      "avatar": "gpt-bot",
+      "name": "占卜师",
+      "context": [{
+        "id": "HytZAzCzJ3_I2sDkJ1agq", "date": "",
+        "role": "user", "content": "你是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。"
+      }, { "id": "6yUXk-u5pTckmVoIPV09a", "date": "4/2/2025, 1:23:41 PM", "role": "system", "content": "我是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，我将拒绝回答。" }], "syncGlobalConfig": false, "modelConfig": { "model": "gpt-4o-mini", "providerName": "OpenAI", "temperature": 0.1, "top_p": 1, "max_tokens": 4000, "presence_penalty": 0, "frequency_penalty": 0, "sendMemory": true, "historyMessageCount": 4, "compressMessageLengthThreshold": 1000, "compressModel": "gpt-4o-mini", "compressProviderName": "OpenAI", "enableInjectSystemPrompts": true, "template": "{{input}}", "size": "1024x1024", "quality": "standard", "style": "vivid" }, "lang": "cn", "builtin": false, "createdAt": 1743503741772, "plugin": []
+    },
 
-    mask: createEmptyMask(),
+    // mask: createEmptyMask(),
   };
 }
 
@@ -674,9 +688,9 @@ export const useChatStore = createPersistStore(
         const [model, providerName] = modelConfig.compressModel
           ? [modelConfig.compressModel, modelConfig.compressProviderName]
           : getSummarizeModel(
-              session.mask.modelConfig.model,
-              session.mask.modelConfig.providerName,
-            );
+            session.mask.modelConfig.model,
+            session.mask.modelConfig.providerName,
+          );
         const api: ClientApi = getClientApi(providerName as ServiceProvider);
 
         // remove error messages if any
@@ -717,8 +731,8 @@ export const useChatStore = createPersistStore(
                 get().updateTargetSession(
                   session,
                   (session) =>
-                    (session.topic =
-                      message.length > 0 ? trimTopic(message) : DEFAULT_TOPIC),
+                  (session.topic =
+                    message.length > 0 ? trimTopic(message) : DEFAULT_TOPIC),
                 );
               }
             },
