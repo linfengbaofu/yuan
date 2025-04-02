@@ -98,7 +98,7 @@ export interface ChatSession {
 export const DEFAULT_TOPIC = Locale.Store.DefaultTopic;
 export const BOT_HELLO: ChatMessage = createMessage({
   role: "assistant",
-  content: '我是是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
+  content: '我是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
 });
 export const User_HELLO: ChatMessage = createMessage({
   role: "user",
