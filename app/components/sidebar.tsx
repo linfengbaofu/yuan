@@ -70,6 +70,7 @@ function getRandomGua() {
   const randomIndex = Math.floor(Math.random() * guaList.length)
   return guaList[randomIndex]
 }
+const tttt = getRandomGua()
 
 // 使用示例
 const DISCOVERY = [
@@ -290,7 +291,7 @@ export function SideBar(props: { className?: string }) {
     >
       <SideBarHeader
         title="袁天罡"
-        subTitle={getRandomGua()}
+        subTitle={tttt}
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
       >

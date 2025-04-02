@@ -98,11 +98,11 @@ export interface ChatSession {
 export const DEFAULT_TOPIC = Locale.Store.DefaultTopic;
 export const BOT_HELLO: ChatMessage = createMessage({
   role: "assistant",
-  content: '我是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
+  content: '我是袁天罡，一个专业的算命师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题,一概不予回答',
 });
 export const User_HELLO: ChatMessage = createMessage({
   role: "user",
-  content: '你是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。',
+  content: '你是一个专业的算命师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题,一概不予回答',
 });
 
 function createEmptySession(): ChatSession {
@@ -122,17 +122,17 @@ function createEmptySession(): ChatSession {
       "id": "AQ1UVwZc5-wIqbNSdHu2d",
       "hideContext": true,
       "avatar": "gpt-bot",
-      "name": "占卜师",
+      "name": "袁天罡",
       "context": [{
         "id": "HytZAzCzJ3_I2sDkJ1agq",
         "date": "",
         "role": "user",
-        "content": "你是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，请礼貌地拒绝回答。"
+        "content": "你是一个专业的算命师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题,一概不予回答"
       }, {
         "id": "6yUXk-u5pTckmVoIPV09a",
         "date": "4/2/2025, 1:23:41 PM",
         "role": "system",
-        "content": "我是一个专业的占卜师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，我将拒绝回答。"
+        "content": "我是一个专业的算命师，只能回答占卜、星座、塔罗牌、八字、紫微斗数等命理相关的问题。任何非占卜类问题，我将拒绝回答。"
       }],
       "syncGlobalConfig": false,
       "modelConfig": {

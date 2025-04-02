@@ -1713,7 +1713,7 @@ function _Chat() {
             </div>
           </div>
           <div className="window-actions">
-            <div className="window-action-button">
+            {/* <div className="window-action-button">
               <IconButton
                 icon={<ReloadIcon />}
                 bordered
@@ -1723,8 +1723,8 @@ function _Chat() {
                   chatStore.summarizeSession(true, session);
                 }}
               />
-            </div>
-            {!isMobileScreen && (
+            </div> */}
+            {/* {!isMobileScreen && (
               <div className="window-action-button">
                 <IconButton
                   icon={<RenameIcon />}
@@ -1734,8 +1734,8 @@ function _Chat() {
                   onClick={() => setIsEditingMessage(true)}
                 />
               </div>
-            )}
-            <div className="window-action-button">
+            )} */}
+            {/* <div className="window-action-button">
               <IconButton
                 icon={<ExportIcon />}
                 bordered
@@ -1744,7 +1744,7 @@ function _Chat() {
                   setShowExport(true);
                 }}
               />
-            </div>
+            </div> */}
             {showMaxIcon && (
               <div className="window-action-button">
                 <IconButton

@@ -152,7 +152,7 @@ const cn = {
     ResetConfirm: "确认清空历史摘要？",
   },
   Home: {
-    NewChat: "占卜师",
+    NewChat: "袁天罡",
     DeleteChat: "确认删除选中的对话？",
     DeleteToast: "已删除会话",
     Revert: "撤销",
@@ -620,7 +620,7 @@ const cn = {
     },
   },
   Store: {
-    DefaultTopic: "占卜师",
+    DefaultTopic: "袁天罡",
     BotHello: "有什么可以帮你的吗",
     Error: "出错了，稍后重试吧",
     Prompt: {
